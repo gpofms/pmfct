@@ -1,36 +1,10 @@
 /********** Template CSS **********/
-body{
-    background-color:yellow
-};
-
-:root {
-    --primary: #566a7f;
-    --secondary: #ffffff;
-    --light: #6C7293;
-    --dark: #f5f5f9;
-}
-
 .back-to-top {
     position: fixed;
     display: none;
     right: 45px;
     bottom: 45px;
     z-index: 99;
-}
-
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
 }
 
 
@@ -64,7 +38,20 @@ body{
     font-weight: normal;
     border-radius: 50px;
 }
-
+.btn-primary {
+    color: #fff;
+    background-color: #1e91ff;
+    border-color: #1e91ff;
+    font-size: .9rem;
+    padding: 5px 0;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #1e91ff;
+    border-color: #1e91ff;
+    font-size: .9rem;
+    padding: 5px 0;
+}
 
 /*** Layout ***/
 .sidebar {
@@ -489,6 +476,14 @@ border-radius: 0px 10px 0px 0px;
 } */
 
 
+ /* Start CSS For Vertical Step */
+
+
+* {-webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  position:relative;
+}
 section
 {
 	position: relative;
@@ -604,16 +599,17 @@ section .page .sign_up h2
 	position: relative;
 	margin: 50px 0;
 	padding: 0;
+    color:#0d47a1;
 }
-section .page .sign_up input
+/* section .page .sign_up input
 {
 	margin: 5px 0;
 	width: 300px;
 	height: 30px;
 	color: #000;
 	font-weight: 700;
-}
-section .page .sign_up input[type="text"],
+} */
+/* section .page .sign_up input[type="text"],
 section .page .sign_up input[type="email"],
 section .page .sign_up input[type="password"]
 {
@@ -621,34 +617,17 @@ section .page .sign_up input[type="password"]
 	outline: none;
 	border-bottom: 1px solid #000;
 	transition: .5s;
-}
+} */
 section .page .sign_up input[type="text"]:focus,
 section .page .sign_up input[type="email"]:focus,
 section .page .sign_up input[type="password"]:focus
 {
-	border-bottom-color: #D50000;
+	/* border-bottom-color: #D50000; */
 	transition: .5s;
 }
-section .page .sign_up .up
-{
-	width: 150px;
-	height: 40px;
-	font-weight: 400;
-	border:none;
-	outline: none;
-	background: #000;
-	color: #fff;
-	border-radius: 30px;
-	transition: .5s;
-	cursor: pointer;
-}
-section .page .sign_up .up:hover
-{
-	background: transparent;
-	border:2px solid #000;
-	color: #000;
-	font-weight: 700;
-}
+
+
+
 section .page .welcome.active
 {
 	background: #000;
@@ -685,21 +664,12 @@ section .page .login h2
 	position: relative;
 	margin: 50px 0;
 	padding: 0;
+    color: #000;
 }
-section .page .login input
-{
-	margin: 5px 0;
-	width: 300px;
-	height: 30px;
-	color: #000;
-	font-weight: 700;
-}
+
 section .page .login input[type="email"],
 section .page .login input[type="password"]
 {
-	border:none;
-	outline: none;
-	border-bottom: 1px solid #000;
 	transition: .5s;
 }
 section .page .login input[type="email"]:focus,
@@ -716,7 +686,7 @@ section .page .login .in
 	border:none;
 	outline: none;
 	background: #000;
-	color: #fff;
+	color: #db0000;
 	border-radius: 30px;
 	transition: .5s;
 	cursor: pointer;
@@ -734,4 +704,100 @@ section .page .login.active
 	opacity: 1;
 	visibility: visible;
 	transition: 1s cubic-bezier(.95,.32,.37,1.31);
+}
+.btn-check:checked+.btn-primary, .btn-check:active+.btn-primary, .btn-primary:active, .btn-primary.active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #1e91ff;
+    border-color: #1e91ff;
+}
+
+.timeline {
+  font:normal bold 16px/1.6rem "Open Sans Condensed";
+  padding:1rem;
+}
+.timeline .circle {
+    background: #fff;
+    border: 0.4rem solid #1c4167;
+    border-radius: 100%;
+    height: 1.55rem;
+    margin: auto;
+    width: 1.55rem;
+    vertical-align: middle;
+}
+.timeline ul {
+  margin:0;
+  padding:0;
+}
+.timeline em {
+    color: #3c6691;
+    display: block;
+    font-weight: bold;
+    background: #e8f0f7;
+    padding: 2px 9px;
+    text-align: center;
+    border-bottom: 1px dashed #97b5cf;
+}
+.timeline_heading {
+    color: #1c4167;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0px;
+    background: #6a95b921;
+    padding: 6px 24px;
+    display: inline-block;
+    border: 1px solid #a2bdd4;
+    border-radius: 4px;
+}
+.timeline li {
+  border:0 solid #1c4167;
+  color:#db0000 ;
+  font-family:"Open Sans";
+  list-style-type:none;
+  text-transform:uppercase;
+  padding:1rem 1rem;
+  width:calc(50% + 1px);}
+.timeline li:after {background:#1c4167;border-radius:100%;content:"";display:inline-block;height:1rem;position:absolute;right:calc(-.5rem - 1px);width:1rem; top: 2.5rem;}
+.timeline li:nth-child(even):after {left:calc(-.5rem - 1px);}
+.timeline li:nth-child(odd) {border-right-width:2px;text-align:right;}
+.timeline li:nth-child(even) {border-left-width:2px; text-align:left;}
+.border_block {
+    border: 1px solid #97b5cf;
+}
+
+ /*End CSS For Vertical Step */
+
+
+ .data_servey{
+    font-weight: bolder;
+    display: block;
+    background: #ebebeb;
+    text-align: center;
+    color: #1c4167;
+    font-size: 1.25rem;
+}
+.form-control{
+    color: #667A8F;
+    background-color: #fff;
+    border: 1px solid #97b5cf;
+    padding: .375rem 1.75rem;
+}
+.form-control:focus {
+    color: #6C7293;
+    background-color: #fff;
+    border-color: #97b5cf;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(228, 239, 249, 0.77);
+  }
+  .border {
+    border: 1px solid #DFDFDF !important;
+  }
+.text-box-icon i {
+    position: absolute;
+    z-index: 99;
+    left: 2%;
+    font-size: .8rem;
+}
+  .text-box-icon {
+    display: flex;
+    align-items: center;
 }

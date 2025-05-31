@@ -47,8 +47,9 @@ class LoginController extends Controller
         ]);
 
         $agencies = AgencyMaster::get();
+        $pagetitle ="Mohit";
 
-        return view('dashboard',compact('agencies'));
+        return view('dashboard',compact('agencies','pagetitle'));
 
         // return redirect('dashboard');
 

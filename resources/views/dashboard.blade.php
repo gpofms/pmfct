@@ -1,99 +1,13 @@
-{{-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-
-    <div class="float-right">
-        <a href="{{ route('logout') }}">Log Out</a>
-    </div>
-
-    <div class="container">
-        <h1>Dashboard</h1>
-        <table class="table table-bordered table-striped data-table table_data width100">
-            <thead>
-                <tr>
-                    <th>Agency</th>
-                    <th>Active</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($agencies as $agency)
-                    <tr>
-                        <td>{{$agency->name}}</td>
-                        <td>{{$agency->active}}</td>
-                        <td><a href="edit">Edit</a></td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </div>
-  </body>
-</html> --}}
-
 <!DOCTYPE html>
 <html lang="en">
-
 @include('layout.header')
-
-<head>
-    <meta charset="utf-8">
-    <title>DarkPan - Bootstrap 5 Admin Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    {{-- <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon"> --}}
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"  >
-
-    <!-- Customized Bootstrap Stylesheet -->
-    {{-- <link href="css/bootstrap.min.css" rel="stylesheet"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-
-    <!-- Template Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {{-- <link href="css/style.css" rel="stylesheet"> --}}
-</head>
-
 <body>
     <div class="container-fluid position-relative p-0">
-        <!-- Spinner Start -->
-        {{-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary_1" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div> --}}
-        <!-- Spinner End -->
-
 
         <!-- Navbar Start -->
             <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
                 <div class="d-flex align-items-center">
-                    <!-- <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-                    </div> -->
-                    <h3 class="text-color-1 me-4">Admin Logo</h3>
-                    <!-- <div class="ms-3 ">
-                        <h6 class="mb-0 text-color-1">Jhon Doe</h6>
-                        <span>Admin</span>
-                    </div> -->
+                    <h3 class="text-color-1 me-4 fs-6">Admin Logo</h3>
                 </div>
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary_1 mb-0"><i class="fa fa-user-edit"></i></h2>
@@ -249,7 +163,7 @@
         <!-- Content Start -->
         <div class="content">
 
-            <!-- Sale & Revenue Start -->
+        <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
@@ -296,6 +210,9 @@
                 </div>
             </div>
             <!-- Sale & Revenue End -->
+
+
+            <!-- Graph Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row">
                     <div class="col-md-6">
@@ -304,7 +221,7 @@
                                 <h6 class="mb-0 text-color-1">Recent Salse</h6>
                                 <a href="" class="link_btn">Show All</a>
                             </div>
-                            <div id="main" style="width: 600px; height: 400px;"></div>
+                            <div id="main" style="width: 100%; height: 400px;"></div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -313,7 +230,81 @@
                             <h6 class="mb-0 text-color-1">Recent Salse</h6>
                             <a href="" class="link_btn">Show All</a>
                         </div>
-                        <div id="pieChart" style="width: 600px; height: 400px;"></div>
+                        <div id="pieChart" style="width: 100%; height: 400px;"></div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+            <!-- Graph End -->
+
+            {{-- -- Start Step Chart -- --}}
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class=" bg-secondary_1 border_light-1 text-center rounded p-sm-4">
+                            <div class="timeline">
+                                <h6 class="timeline_heading mb-2">Birth Registerd</h6>
+                                <div class="circle"></div>
+                                <ul class="d-flex">
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                </ul>
+                                <h6 class="timeline_heading ">Birth Registerd</h6>
+                                <ul class="d-flex">
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                </ul>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                    <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
+                        <div class="custom_table_border ">
+                            <table class="table table-bordered table-hover custom_table m-0">
+                                <thead class="thead-dark">
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td scope="row">1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">4</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">5</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     </div>
                 </div>
@@ -321,8 +312,8 @@
 
 
 
-
-            <!-- Recent Sales Start -->
+            
+             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
@@ -375,11 +366,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent Sales End -->
-
-
-
-
+            {{-- -- End Step Chart -- --}}
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4 footer_menu">
@@ -400,105 +387,107 @@
         </div>
         <!-- Content End -->
 
-
-
-
-
-
-
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    php
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}" type="text/script"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script> -->
     <script>
-  // Initialize chart
-  var myChart = echarts.init(document.getElementById('main'));
+            // Initialize chart
+            var myChart = echarts.init(document.getElementById('main'));
 
-  // Chart options
-  var option = {
-    title: {
-      text: 'ECharts Example'
-    },
-    tooltip: {},
-    xAxis: {
-      data: ['Apple', 'Banana', 'Orange']
-    },
-    yAxis: {},
-    series: [{
-      name: 'Sales',
-      type: 'bar',
-      data: [5, 20, 36]
-    }]
-  };
+            // Chart options
+            var option = {
+                title: {
+                text: 'ECharts Example'
+                },
+                tooltip: {},
+                xAxis: {
+                data: ['Apple', 'Banana', 'Orange']
+                },
+                yAxis: {},
+                series: [{
+                name: 'Sales',
+                type: 'bar',
+                data: [5, 20, 36]
+                }]
+            };
 
-  // Apply options
-  myChart.setOption(option);
-</script>
+            // Apply options
+            myChart.setOption(option);
+    </script>
 
-<script>
-    // Initialize the chart
-    var chart = echarts.init(document.getElementById('pieChart'));
+    <script>
+        // Initialize the chart
+        var chart = echarts.init(document.getElementById('pieChart'));
 
-    // Chart options
-    var option = {
-      title: {
-        text: 'Fruit Sales',
-        left: 'center'
-      },
-      tooltip: {
-        trigger: 'item'
-      },
-      legend: {
-        orient: 'vertical',
-        left: 'left'
-      },
-      series: [
-        {
-          name: 'Sales',
-          type: 'pie',
-          radius: '50%',
-          data: [
-            { value: 1048, name: 'Apples' },
-            { value: 735, name: 'Bananas' },
-            { value: 580, name: 'Oranges' },
-            { value: 484, name: 'Grapes' },
-            { value: 300, name: 'Pineapples' }
-          ],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)'
+        // Chart options
+        var option = {
+        title: {
+            text: 'Fruit Sales',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left'
+        },
+        series: [
+            {
+            name: 'Sales',
+            type: 'pie',
+            radius: '50%',
+            data: [
+                { value: 1048, name: 'Apples' },
+                { value: 735, name: 'Bananas' },
+                { value: 580, name: 'Oranges' },
+                { value: 484, name: 'Grapes' },
+                { value: 300, name: 'Pineapples' }
+            ],
+            emphasis: {
+                itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
             }
-          }
-        }
-      ]
+            }
+        ]
+        };
+
+        // Use the specified configuration
+        chart.setOption(option);
+
+    </script>
+<script>
+$(document).ready(function () {
+    $('.sidebar-toggler').click(function () {
+        $('.sidebar, .content').toggleClass("open");
+        return false;
+    });
+});
+</script>
+<script>
+    var chart = echarts.init(document.getElementById('main'));
+    var option = {
+        // your chart options here
     };
-
-    // Use the specified configuration
     chart.setOption(option);
-  </script>
 
-
+    // Add this to make it responsive
+    window.addEventListener('resize', function () {
+        chart.resize();
+    });
 </script>
 
-
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+      
 </body>
 
 </html>
