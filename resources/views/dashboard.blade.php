@@ -21,15 +21,7 @@
         <!-- Navbar Start -->
             <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
                 <div class="d-flex align-items-center">
-                    <!-- <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-                    </div> -->
-                    <h3 class="text-color-1 me-4">Admin Logo</h3>
-                    <!-- <div class="ms-3 ">
-                        <h6 class="mb-0 text-color-1">Jhon Doe</h6>
-                        <span>Admin</span>
-                    </div> -->
+                    <h3 class="text-color-1 me-4 fs-6">Admin Logo</h3>
                 </div>
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary_1 mb-0"><i class="fa fa-user-edit"></i></h2>
@@ -433,6 +425,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.sidebar-toggler').click(function () {
+                $('.sidebar, .content').toggleClass("open");
+                return false;
+            });
+        });
+        </script>
+        <script>
+            var chart = echarts.init(document.getElementById('main'));
+            var option = {
+                // your chart options here
+            };
+            chart.setOption(option);
+
+            // Add this to make it responsive
+            window.addEventListener('resize', function () {
+                chart.resize();
+            });
+        </script>
 
 </body>
 </html>

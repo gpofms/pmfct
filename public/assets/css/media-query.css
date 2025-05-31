@@ -1,0 +1,13 @@
+@media (max-width: 576px) {
+.timeline em {
+    font-size: .7rem;
+    line-height: 1rem;
+}
+.data_servey {
+    font-size: .9rem;
+}
+.timeline_heading {
+    font-size: 0.8rem
+}
+.content-search{display: none;}
+}
