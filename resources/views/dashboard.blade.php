@@ -306,6 +306,137 @@
             </div>
             <!-- Recent Sales End -->
 
+             {{-- -- Start Step Chart -- --}}
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class=" bg-secondary_1 border_light-1 text-center rounded p-sm-4">
+                            <div class="timeline">
+                                <h6 class="timeline_heading mb-2">Birth Registerd</h6>
+                                <div class="circle"></div>
+                                <ul class="d-flex">
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                </ul>
+                                <h6 class="timeline_heading ">Birth Registerd</h6>
+                                <ul class="d-flex">
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                    <li><a href="#" target=""><div class="border_block"><em>0- 3 Month Vaccination</em> <strong class="data_servey">4400</strong></div></a></li>
+                                </ul>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                    <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
+                        <div class="custom_table_border ">
+                            <table class="table table-bordered table-hover custom_table m-0">
+                                <thead class="thead-dark">
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td scope="row">1</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">2</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">3</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">4</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                    <td scope="row">5</td>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+
+
+
+            
+             <!-- Recent Sales Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h6 class="mb-0 text-color-1">Recent Salse</h6>
+                        <a href="" class="link_btn">Show All</a>
+                    </div>
+                    <div class="custom_table_border ">
+                        <table class="table table-bordered table-hover custom_table m-0">
+                            <thead class="thead-dark">
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td scope="row">1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                <td scope="row">2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                </tr>
+                                <tr>
+                                <td scope="row">3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                </tr>
+                                <tr>
+                                <td scope="row">4</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                </tr>
+                                <tr>
+                                <td scope="row">5</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {{-- -- End Step Chart -- --}}
+
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4 footer_menu">
                 <div class="bg-secondary_1 box-shadow_box_1 rounded-top p-4">
