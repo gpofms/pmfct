@@ -50,34 +50,33 @@ class LoginController extends Controller
         }
 
         try {
-
             $transactions = PMFCTEvents::select('*')->get();
             // dd($transactions[0]->subDistrict);
-
+            
             $pmfctBasics =  PMFCTBasics::select('*')->get();
-
+            
             $startDate = Carbon::now()->startOfMonth();
-
+            
             $lastDate = Carbon::now()->lastOfMonth();
-
+            
             $currentMonthTransactions = PMFCTEvents::whereBetween('created_at', [$startDate, $lastDate])->count();
-
+            
             $date = Carbon::now();
-
+            
             $monthName = $date->format('F');
-
+            
             $totalEvents = EventMaster::withCount('transactions')->has('transactions')->get();
-
+            
             $eventName = $totalEvents->pluck('name');
-
+            
             $transactionsCount = $totalEvents->pluck('transactions_count');
-
+            
             $totalAgencies = AgencyMaster::withCount('events')->has('events')->get();
-
+            
             $agencyName = $totalAgencies->pluck('name');
-
+            
             $eventsCount = $totalAgencies->pluck('events_count');
-
+            
             return view('dashboard',compact('transactions', 'pmfctBasics', 'currentMonthTransactions', 'monthName', 'totalEvents', 'transactionsCount', 'eventName', 'totalAgencies', 'agencyName', 'eventsCount'));
 
         } catch (\Exception $e) {
