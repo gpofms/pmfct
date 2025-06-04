@@ -342,7 +342,9 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td scope="row">1</td>
+                                    <td scope="row">
+                                    <a class="link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</a>
+                                    </td>
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td>@mdo</td>
@@ -379,62 +381,6 @@
                 </div>
              </div>
 
-
-
-            
-             <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0 text-color-1">Recent Salse</h6>
-                        <a href="" class="link_btn">Show All</a>
-                    </div>
-                    <div class="custom_table_border ">
-                        <table class="table table-bordered table-hover custom_table m-0">
-                            <thead class="thead-dark">
-                                <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td scope="row">1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <td scope="row">2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <td scope="row">3</td>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
-                                <tr>
-                                <td scope="row">4</td>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
-                                <tr>
-                                <td scope="row">5</td>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
             {{-- -- End Step Chart -- --}}
 
             <!-- Footer Start -->
@@ -466,6 +412,82 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Birth Registerd</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-body-tertiary">
+          <div class="container">
+    <div class="">
+      {{-- <div class="d-flex align-items-center mb-3">
+        <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Profile">
+        <div>
+          <h4 class="mb-0">Kristina Patton</h4>
+          <small>Class: 9 A | DOB: 27th Jul 2006</small><br>
+          <small>Attendance: 85% (32 Leaves)</small>
+        </div>
+        <div class="ms-auto text-end">
+          <span class="badge bg-primary badge-custom">Studies 7</span>
+          <span class="badge bg-success badge-custom">Sports 9</span>
+          <span class="badge bg-danger badge-custom">Warnings 1</span><br>
+          <small>Class Teacher: Ms. Julia Milburn</small>
+        </div>
+      </div> --}}
+
+      <div class="row gap-3">
+        <!-- Personal Info -->
+        <div class="col mb-3 p-0 border profile-card">
+          <h6 class="section-title"><i class="far fa-user"></i> Personal Information</h6>
+          <div class="info-item"><span>Gender :</span> <br> Female</div>
+          <div class="info-item"><span>Age :</span>  <br> 15</div>
+          <div class="info-item"><span>Contact : </span> <br> +1 424 270 6264</div>
+          <div class="info-item"><span>Address :</span>  <br> 9 Pebble Street, Los Angeles</div>
+        </div>
+
+        <!-- Parents Info -->
+        <div class="col mb-3 p-0 border profile-card">
+          <h6 class="section-title"><i class="fa fa-certificate"></i> Parents Information</h6>
+          <div class="info-item"><span>Father's Name :</span> <br> Mr. Damien Patton</div>
+          <div class="info-item"><span>Mother's Name :</span>  <br> Mrs. Damien Patton</div>
+          <div class="info-item"><span>Contact : </span> <br> +1 424 270 6264</div>
+          <div class="info-item"><span>Occupation :</span>  <br> Doctor</div>
+        </div>
+        <!-- Academic Info -->
+        <div class="col mb-3 p-0 border profile-card">
+          <h6 class="section-title"><i class="fa fa-university"></i> Academic Information</h6>
+          <div class="info-item"><span>Previous Term Grades :</span> <br>B+ / 69%</div>
+          <div class="info-item"><span>Best Performed Subject :</span>  <br> Mathematicsn</div>
+          <div class="info-item"><span>Weak Subject : </span> <br> Geometry</div>
+          <div class="info-item"><span>Best Scores In :</span>  <br> Physics (91%)</div>
+        </div>
+       <!-- Extra Curricular -->
+       <div class="col mb-3 p-0 border profile-card">
+          <h6 class="section-title"><i class="fa fa-award"></i> Extra  Information</h6>
+          <div class="info-item"><span>Caste :</span> <br> Gernal</div>
+          <div class="info-item"><span>Disability</span>  <br>No</div>
+          <div class="info-item"><span>Weak Subject : </span> <br> Geometry</div>
+          <div class="info-item"><span>Best Scores In :</span>  <br> Physics (91%)</div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -579,6 +601,11 @@
                 chart.resize();
             });
         </script>
+
+        <!-- Button trigger modal -->
+
+
+<!-- Modal -->
 
 </body>
 </html>
