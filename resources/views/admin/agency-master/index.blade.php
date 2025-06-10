@@ -179,9 +179,23 @@
 
         <!-- Content Start -->
         <div class="content">
+            <div class="container-fluid px-4">
+                <div class="row">
+                    <header class="content-header pe-0 d-flex pt-4">
+                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">Agency Master</h2> 
+                    <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6"> 
+                        <ol class="breadcrumb fs-8"> 
+                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Agencies</a></li> 
+                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li> 
+                        </ol>
+                    </div> 
+                    </header>
+                </div>
+            </div>
+
 
             <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
+            <div class="container-fluid px-4">
                 <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0 text-color-1">Agency Master</h6>
@@ -211,10 +225,11 @@
                                         @else
                                             <td>No</td>
                                         @endif
-                                        <td>{{date_to_format($data->created_at)}}</td>
+                                        <td>{{date('d-m-Y',strtotime($data->created_at))}}</td>
                                         <td>
-                                            <a href="agency-master/{{$data->id}}/edit" class="btn btn-edit">Edit</a>
-                                            <a href="agency-master/'.{{$data->id}}.'" class="btn btn-view">View</a>
+                                            <a href="agency-master/{{$data->id}}/edit" class="btn btn-edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="far fa-edit"></i></a>
+                                            <a href="agency-master/{{$data->id}}/edit" class="btn btn-view" data-bs-toggle="tooltip" data-bs-placement="top" title="View"><i class="far fa-eye"></i></a>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
@@ -264,6 +279,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+    </script>
 
 </body>
 </html>

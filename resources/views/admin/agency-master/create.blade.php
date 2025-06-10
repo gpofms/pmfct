@@ -229,7 +229,7 @@
                                             </div>
 
                                             <div class="">
-                                                <button type="submit" class="btn btn-primary mr-3" id="submit">Submit</button>
+                                                <button type="submit" class="btn btn-primary me-3" id="submit">Submit</button>
                                                 <button type="reset" class="btn btn-warning ">Reset</button>
                                             </div>
 
