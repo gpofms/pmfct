@@ -244,23 +244,6 @@
             </div>
             <!-- Recent Sales End -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4 footer_menu">
                 <div class="bg-secondary_1 box-shadow_box_1 rounded-top p-4">
