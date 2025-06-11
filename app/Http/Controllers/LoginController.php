@@ -51,6 +51,7 @@ class LoginController extends Controller
 
         try {
             $transactions = PMFCTEvents::select('*')->get();
+            dd($transactions);
             // dd($transactions[0]->subDistrict);
             
             $pmfctBasics =  PMFCTBasics::select('*')->get();

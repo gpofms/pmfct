@@ -44,7 +44,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary_1 box-shadow_box_1 border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -54,7 +54,7 @@
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -64,7 +64,7 @@
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link " data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 30px; height: 30px;">
+                            <img class="rounded-circle me-lg-2" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 30px; height: 30px;">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary_1 box-shadow_box_1 border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
@@ -111,7 +111,6 @@
                 </div>
             </nav>
         <!-- Navbar End -->
-
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
@@ -179,48 +178,61 @@
 
         <!-- Content Start -->
         <div class="content">
+            <div class="container-fluid px-4">
+                <div class="row">
+                    <header class="content-header pe-0 d-flex pt-4">
+                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">E-Commerce</h2> 
+                    <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6"> 
+                        <ol class="breadcrumb fs-8"> 
+                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Quantum Admin</a></li> 
+                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li> 
+                        </ol>
+                    </div> 
+                    </header>
+                </div>
+            </div>
 
             <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
+                    <div class="col-sm-6 col-xl-3 m-0">
                         <div class="bg-secondary_1 border_light-1 rounded d-flex align-items-center p-4 position-relative">
                            <i class="far fa-user-circle block-primary"></i>
                             <div class="ms-3">
                                 <h6 class="mb-0 text_primary f-14">{{count($transactions)}}</h6>
                                 <p class="m-0 f-13 text-color-1">Total Transactions</p>
                             </div>
-                            {{-- <div class="badge graph_badge-success"> <i class="far fa-arrow-alt-circle-up"></i> 8.07% </div> --}}
+                            <div class="badge graph_badge-success"> <i class="far fa-arrow-alt-circle-up"></i> 8.07% </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3">
+                    <div class="col-sm-6 col-xl-3 m-0">
                         <div class="bg-secondary_1 border_light-1 rounded d-flex align-items-center p-4 position-relative">
                            <i class="fa fa-hands-helping block-success"></i>
                             <div class="ms-3">
                                 <h6 class="mb-0 text_success f-14">{{count($pmfctBasics)}}</h6>
                                 <p class="m-0 f-13 text-color-1">PMFCT Basics</p>
                             </div>
-                            {{-- <div class="badge graph_badge-danger"> <i class="far fa-arrow-alt-circle-up"></i> 3.07% </div> --}}
+                            <div class="badge graph_badge-danger"> <i class="far fa-arrow-alt-circle-up"></i> 3.07% </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3">
+                    <div class="col-sm-6 col-xl-3 m-0">
                         <div class="bg-secondary_1 border_light-1 rounded d-flex align-items-center p-4 position-relative">
                            <i class="far fa-calendar-alt block-info"></i>
                             <div class="ms-3">
                                 <h6 class="mb-0 text_info f-14">{{$currentMonthTransactions}}</h6>
                                 <p class="m-0 f-13 text-color-1">Current Month ({{$monthName}}) Transactions</p>
                             </div>
-                            {{-- <div class="badge graph_badge-success"> <i class="far fa-arrow-alt-circle-up"></i> 1.07% </div> --}}
+                            <div class="badge graph_badge-success"> <i class="far fa-arrow-alt-circle-up"></i> 1.07% </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3">
+                    <div class="col-sm-6 col-xl-3 m-0">
                         <div class="bg-secondary_1 border_light-1 rounded d-flex align-items-center p-4 position-relative">
                           <i class="far fa-life-ring block-danger"></i>
                             <div class="ms-3">
                                 <h6 class="mb-0 text_danger f-14">{{count($totalEvents)}}</h6>
                                 <p class="m-0 f-13 text-color-1">Total Events Registered</p>
                             </div>
-                            {{-- <div class="badge graph_badge-danger"> <i class="far fa-arrow-alt-circle-up"></i> 5.07% </div> --}}
+                            <div class="badge graph_badge-danger"> <i class="far fa-arrow-alt-circle-up"></i> 5.07% </div>
                         </div>
                     </div>
 
@@ -235,7 +247,7 @@
                                 <h6 class="mb-0 text-color-1">Recent Agencies</h6>
                                 {{-- <a href="" class="link_btn">Show All</a> --}}
                             </div>
-                            <div id="main" style="width: 600px; height: 400px;"></div>
+                            <div id="main" style="width: 100%; height: 400px;"></div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -244,7 +256,7 @@
                             <h6 class="mb-0 text-color-1">Recent Transactions</h6>
                             {{-- <a href="" class="link_btn">Show All</a> --}}
                         </div>
-                        <div id="pieChart" style="width: 600px; height: 400px;"></div>
+                        <div id="pieChart" style="width: 100%; height: 400px;"></div>
                     </div>
                     </div>
                 </div>
@@ -257,7 +269,7 @@
                         <h6 class="mb-0 text-color-1">Recent Agencies</h6>
                         {{-- <a href="" class="link_btn">Show All</a> --}}
                     </div>
-                    <div class="custom_table_border ">
+                    <div class="custom_table_border table-responsive">
                         <table class="table table-bordered table-hover custom_table m-0">
                             <thead class="thead-dark">
                                 <tr>
@@ -330,7 +342,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
-                        <div class="custom_table_border ">
+                        <div class="custom_table_border  table-responsive">
                             <table class="table table-bordered table-hover custom_table m-0">
                                 <thead class="thead-dark">
                                     <tr>
