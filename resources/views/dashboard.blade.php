@@ -181,13 +181,13 @@
             <div class="container-fluid px-4">
                 <div class="row">
                     <header class="content-header pe-0 d-flex pt-4">
-                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">E-Commerce</h2> 
-                    <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6"> 
-                        <ol class="breadcrumb fs-8"> 
-                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Quantum Admin</a></li> 
-                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li> 
+                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">E-Commerce</h2>
+                    <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6">
+                        <ol class="breadcrumb fs-8">
+                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Quantum Admin</a></li>
+                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li>
                         </ol>
-                    </div> 
+                    </div>
                     </header>
                 </div>
             </div>
@@ -291,7 +291,7 @@
                                 $no = 0;
                             @endphp
                             <tbody>
-                                
+
                                 @foreach($transactions as $data)
                                     <tr>
                                         <td>{{++$no}}</td>
@@ -573,7 +573,7 @@
                 left: 'left'
             },
             series: [{
-                name: 'Sales',
+                name: 'Transactions',
                 type: 'pie',
                 radius: '50%',
                 data: pieData,

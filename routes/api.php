@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AgencyMasterController;
 use App\Http\Controllers\Api\EventMasterController;
 use App\Http\Controllers\Api\PMFCTEventsController;
-use App\Http\Controllers\Api\LoginController;
+// use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,13 @@ use App\Http\Controllers\Api\LoginController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    // return $request->user();
-
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('index', [AgencyMasterController::class, 'index']);
 });
 
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout'])->middleware('auth:sanctum');
 Route::post('/register', [LoginController::class, 'register']);
 
 Route::get('/index', [AgencyMasterController::class, 'index']);
@@ -43,6 +44,5 @@ Route::get('/pmfct-events-index', [PMFCTEventsController::class, 'index']);
 Route::post('/pmfct-events-store', [PMFCTEventsController::class, 'store']);
 Route::get('/pmfct-events-view', [PMFCTEventsController::class, 'view']);
 Route::put('/update-pmfct-event-master', [PMFCTEventsController::class, 'update']);
-
 
 

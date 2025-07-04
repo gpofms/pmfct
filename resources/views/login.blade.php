@@ -29,7 +29,7 @@
         <form action="{{route('login-user')}}" method="post" enctype="multipart/form-data">
             @csrf
 			<h2>Login your Account</h2>
-			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="far fa-user"></i> <input class="form-control" type="text" name="user_name" placeholder="user_name" required></div>
+			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="far fa-user"></i> <input class="form-control" type="text" name="name" placeholder="name" required></div>
 			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="fas fa-key"></i> <input class="form-control" type="password" name="password" placeholder="Password" required></div>
 			<input type="submit" name="sign_in" value="Sign In" class="w-100 btn btn-primary_new">
 		</form>
