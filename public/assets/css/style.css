@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 .back-to-top {
     position: fixed;
     display: none;
@@ -40,17 +41,20 @@
 }
 .btn-primary_new {
     color: #fff;
-    background-color: #1e91ff;
-    border-color: #1e91ff;
+    background-color: #000;
+    border-color: #000;
     font-size: .9rem;
     padding: 5px 0;
+    font-size: 1.1rem;
+    font-family: "Geist", sans-serif;
 }
 .btn-primary_new:hover {
-    color: #fff;
-    background-color: #1e91ff;
-    border-color: #1e91ff;
+     color: #fff;
+    background-color: #000;
+    border-color: #000;
     font-size: .9rem;
     padding: 5px 0;
+    font-size: 1.1rem;
 }
 
 /*** Layout ***/
@@ -259,8 +263,31 @@
 .bootstrap-datetimepicker-widget table td.today::before {
     border-bottom-color: var(--primary);
 }
+.health-bg-1{background: linear-gradient(336deg, #FFE0BD, #EEE);}
+.health-bg-2{background: linear-gradient(135deg, #CFDFFF, #E0E6E5);}
+.health-bg-3{background: linear-gradient(135deg, #B2FBD9, #E0E6E5);}
+.health-bg-4{background: linear-gradient(135deg, #FFC1C1, #E0E6E5);}
+.health-bg-5{background: linear-gradient(135deg, #299d9842, #E0E6E5);}
+.health-bg-6{background: linear-gradient(135deg, #EAC784, #E0E6E5);}
 
-
+.health-block {
+  color: black;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.health-icon {
+  background: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  border: 5px double #dfdfdf;
+}
+.health-block h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 /*** Testimonial ***/
 .progress .progress-bar {
     width: 0px;
@@ -549,28 +576,30 @@ section .page
 	height: 400px;
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+    border: 1px solid #eaeaea;
 }
-section .page .welcome
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 300px;
-	height: 400px;
-	border-top-left-radius:  5px;
-	border-bottom-left-radius:  5px;
-	background: #0D47A1;
-	text-align: center;
-	transition: 1s cubic-bezier(.95,.32,.37,1.31);
-	z-index: 2;
+section .page .welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 398px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #eaeaea;
+    text-align: center;
+    transition: 1s cubic-bezier(.95,.32,.37,1.31);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 section .page .welcome h2
 {
 	text-align: center;
-	margin: 50px 0;
 	letter-spacing: 2px;
-	color: #fff;
+	color: #000000;
 }
 section .page .welcome p
 {
@@ -579,45 +608,41 @@ section .page .welcome p
 	color: #fff;
 	font-weight: 300;
 }
-section .page .welcome .sign_in
-{
-	margin: 30px 0;
-	width: 150px;
-	height: 40px;
-	text-align: center;
-	border-radius: 30px;
-	outline: none;
-	border:none;
-	background: transparent;
-	border:1px solid #fff;
-	color: #fff;
-	cursor: pointer;
-	opacity: 1;
-	visibility: visible;
-	transition: .5s;
+section .page .welcome .sign_in {
+    margin: 30px 0;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
 }
 section .page .welcome .btn
 {
-	position: absolute;
-	top: 57.5%;
-	left: 25%;
 	width: 150px;
 	height: 40px;
 	text-align: center;
 	border-radius: 30px;
 	outline: none;
 	border:none;
-	background: transparent;
-	border:1px solid #fff;
+	background: #000;
+	border:1px solid #000000;
 	color: #fff;
 	cursor: pointer;
 	opacity: 0;
-	visibility: hidden;
+	display: none;
 }
 section .page .welcome .btn.active
-{
+{    margin: 30px 0;
 	opacity: 1;
-	visibility: visible;
+	display: block;
 	transition: .5s;
 	transition-delay: .5s;
 }
@@ -642,12 +667,13 @@ section .page .sign_up
 	opacity: 1;
 	visibility: visible;
 }
-section .page .sign_up h2
-{
-	position: relative;
-	margin: 50px 0;
-	padding: 0;
-    color:#0d47a1;
+section .page .sign_up h2 {
+    position: relative;
+    margin: 15px 0 40px 0;
+    padding: 0;
+    color: #000000;
+    font-family: "Geist", sans-serif;
+    font-size: 1.8rem;
 }
 /* section .page .sign_up input
 {
@@ -678,8 +704,8 @@ section .page .sign_up input[type="password"]:focus
 
 section .page .welcome.active
 {
-	background: #000;
-	color: #fff;
+	background: #eaeaea;
+	color: #000000;
 	left: 62.5%;
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
@@ -706,6 +732,43 @@ section .page .login
 	opacity: 0;
 	visibility: hidden;
 }
+#login-bg {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Blurred background image using ::before */
+#login-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(../img/amit-kaka-1.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: 0;
+    transform: scale(1.05); /* Prevent blur clipping at edges */
+}
+
+/* Optional: dark overlay on top of blurred image */
+#login-bg::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* adjust as needed */
+    z-index: 1;
+}
+
+/* Content inside stays sharp */
+#login-bg > * {
+    /* position: relative; */
+    z-index: 2;
+}
 
 section .page .login h2
 {
@@ -713,6 +776,7 @@ section .page .login h2
 	margin: 50px 0;
 	padding: 0;
     color: #000;
+     font-family: "Geist", sans-serif;
 }
 
 section .page .login input[type="email"],
@@ -723,7 +787,7 @@ section .page .login input[type="password"]
 section .page .login input[type="email"]:focus,
 section .page .login input[type="password"]:focus
 {
-	border-bottom-color: #2ecc71;
+	/* border-bottom-color: #2ecc71; */
 	transition: .5s;
 }
 section .page .login .in
@@ -758,7 +822,7 @@ section .page .login.active
     background-color: #1e91ff;
     border-color: #1e91ff;
 }
-
+.welcome h4{color: #000;}
 .timeline {
   padding:1rem;
 }
@@ -830,11 +894,11 @@ section .page .login.active
     color: #1c4167;
     font-size: 1.25rem;
 }
-.form-control{
+.form-control {
     color: #667A8F;
     background-color: #fff;
-    border: 1px solid #97b5cf;
-    padding: .375rem 1.75rem;
+    border: 1px solid #eaeaea;
+    padding: .475rem 3rem;
 }
 .form-control:focus {
     color: #6C7293;
@@ -846,11 +910,22 @@ section .page .login.active
   .border {
     border: 1px solid #DFDFDF !important;
   }
-.text-box-icon i {
+/* .text-box-icon i {
     position: absolute;
     z-index: 99;
     left: 2%;
     font-size: .8rem;
+} */
+.text-box-icon i {
+    position: absolute;
+    z-index: 99;
+    left: 0%;
+    font-size: 0.8rem;
+    background: #000000;
+    padding: 14px 14px;
+    border-radius: 5px 0 0 5px;
+    color: #fff;
+    border: 1px solid #000;
 }
   .text-box-icon {
     display: flex;
