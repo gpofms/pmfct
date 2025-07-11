@@ -33,9 +33,9 @@
     <div class="container-fluid position-relative p-0">
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
+        {{-- <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
             <div class="d-flex align-items-center">
-                <h3 class="text-color-1 me-4">Admin Logo</h3>
+                <h3 class="text-color-1 me-4">PMFCT PM - Family Care Tracker</h3>
             </div>
             <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                 <h2 class="text-primary_1 mb-0"><i class="fa fa-user-edit"></i></h2>
@@ -130,8 +130,103 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
         <!-- Navbar End -->
+
+          <!-- Navbar Start -->
+            <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
+                <div class="d-flex align-items-center">
+                    <h3 class="text-color-1 me-4 web-logo">PMFCT <span>PM - Family Care Tracker</span></h3>
+                </div>
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary_1 mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <div class="navbar-nav align-items-center ms-auto py-1 nav_right_block">
+                <div class="content-search me-4">
+                    <form class="d-none d-md-flex">
+                    <i class="fa fa-search icon-color-light"></i>
+                    <input class="serch_bar border-0" type="search" placeholder=" Search">
+                </form>
+                </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <i class="far fa-envelope icon-color"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary_1 box-shadow_box_1 border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0 notification_head">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <i class="far fa-bell icon-color"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary_1 box-shadow_box_1 border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0 notification_head">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0 notification_head">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0 notification_head">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link " data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="{{ asset('assets/img/user.jpg') }}" alt="" style="width: 30px; height: 30px;">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary_1 box-shadow_box_1 border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="{{ route('logout') }}" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        <!-- Navbar End -->
+
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
@@ -180,8 +275,8 @@
         <div class="content">
 
             <!-- Recent Sales Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
+            <div class="container-fluid pt-4 px-4 full-height">
+                <div class="bg-secondary_1 border_light-1 rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0 text-color-1">Health Dashboard</h6>
                         {{-- <a href="{{ route('kpi-master.create') }}" class="link_btn">Add</a> --}}
@@ -190,21 +285,21 @@
                         <div class="row">
                             <div class="col-md-7">
                                 <div class="row gx-3 gy-4">
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-1">
                                             <img src="{{ asset('assets/img/feet.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
                                             <h5 class="mt-3">Birth Registered</h5>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-2">
                                             <img src="{{ asset('assets/img/death-rate.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
                                             <h5 class="mt-3">Infant Mortality</h5>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-3">
                                             <img src="{{ asset('assets/img/pregnant.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
@@ -213,21 +308,21 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-4">
                                             <img src="{{ asset('assets/img/vaccine.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
                                             <h5 class="mt-3">Child Immunization</h5>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-5">
                                             <img src="{{ asset('assets/img/abortion.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
                                             <h5 class="mt-3">Stillbirth</h5>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                                         <div class="health-block health-bg-6">
                                             <img src="{{ asset('assets/img/alarm.png') }}" width="100px"
                                                 class="img-fluid health-icon" alt="" />
@@ -236,7 +331,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5">
+                            {{-- <div class="col-md-5">
                                 <div class=" bg-secondary_1 text-center rounded">
                                     <div class="timeline p-0">
                                         <h6 class="timeline_heading mb-2">Birth Registerd</h6>
@@ -266,6 +361,43 @@
                                         <div class="circle"></div>
                                     </div>
                                 </div>
+                            </div> --}}
+
+                            <div class="col-md-5">
+                               <div class="bg-background py-4">
+                                <div class="timeline d-flex justify-content-evenly">
+                                    <div class="">
+                                        <div class="birth-box">
+                                    <h4 class="m-0">Brith Registered</h4>
+                                    <span>35465</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="entry">
+                                        <div class="core">
+                                        <h3>1980</h3>
+                                            <span>Maternal Mortality</span>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="entry">
+                                        <div class="core">
+                                        <h3>123</h3>
+                                            <span>Infant Mortality</span>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="entry">
+                                        <div class="core">
+                                        <h3>987</h3>
+                                            <span>Stillbirth</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                
+                                </div>
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -308,6 +440,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidebar-toggler').click(function () {
+                $('.sidebar, .content').toggleClass("open");
+                return false;
+            });
+        });
+        </script>
 
 </body>
 

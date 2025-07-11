@@ -263,6 +263,43 @@
 .bootstrap-datetimepicker-widget table td.today::before {
     border-bottom-color: var(--primary);
 }
+/* Fade-in and slide-up on load */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-block {
+    animation: fadeSlideUp 0.8s ease-out forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #f5f5f5; /* Initial background color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Hover effect: scale, shadow, background color */
+.health-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #e0f7fa; /* Change to your desired hover color */
+    cursor: pointer;
+}
+
+/* Image scaling on hover */
+.health-icon {
+    transition: transform 0.3s ease;
+}
+
+.health-block:hover .health-icon {
+    transform: scale(1.1);
+}
 .health-bg-1{background: linear-gradient(336deg, #FFE0BD, #EEE);}
 .health-bg-2{background: linear-gradient(135deg, #CFDFFF, #E0E6E5);}
 .health-bg-3{background: linear-gradient(135deg, #B2FBD9, #E0E6E5);}
@@ -286,7 +323,7 @@
 }
 .health-block h5 {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: normal;
 }
 /*** Testimonial ***/
 .progress .progress-bar {
@@ -979,4 +1016,143 @@ section .page .login.active
 .modal-footer {
     background: #f4f4f4;
     border-top: 1px solid #d7d7d7;
+}
+.bg-background {
+  border: 1px solid #e5e1e1;
+  border-radius: 4px;
+  background: #fbfbfb;
+}
+
+.full-height {
+  min-height: 100vh;
+  /* background: lightcoral; */
+}
+
+
+.web-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  letter-spacing:1px;
+}
+.web-logo span {
+  font-size: .85rem;
+  font-weight: normal;
+  background: #1c416717;
+  color: #000;
+  padding: 2px 5px;
+  letter-spacing: .5px;
+  border-top: 2px solid #315275;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Heath Dashboard tree */
+.timeline{
+  margin-left:100px;
+  overflow:visible;
+  margin: 0;
+}
+
+
+.entry{
+  margin-left:20px;
+  position:relative;
+   /* padding-left: 30px; */
+  border: 2px solid #cec198;
+  border-radius: 5px;
+  min-width:200px;
+  max-width:fit-content;
+  height:80px;
+  overflow:visible;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.core{
+  width:inherit;
+  height:inherit;
+}
+
+.entry:after{
+  content:'';
+  position:absolute;
+  display:block;
+  width:35px;
+  height:3px;
+  background:#c8b57a;
+  top:55%;
+  left:-19%;
+}
+
+.entry:before{
+ 
+  content:"";
+  position:absolute;
+  width:3px;height:150%;
+  display:block;
+  border-radius:0px;
+  border:2px solid #cec198;
+  background: #cec198;
+  left:-19%;
+}
+
+/* .core:before{
+  content:'';
+  display:block;
+  position:absolute;
+  width:7px;height:7px;
+  border:3px solid black;
+  background: black;
+  top:52%;
+  left:-20%;
+} */
+.core h3 {
+  background: #f3e0a8;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-bottom: 2px solid #c8b57a;
+  text-align: center;
+}
+.birth-box {
+  border: 2px solid #cec198;
+  /* padding: 8px 20px; */
+  border-radius: 4px;
+  text-align: center;
+}
+.birth-box h4 {
+  background: #f3e0a8;
+  padding: 6px 25px;
+  border-bottom: 2px solid #c8b57a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #434040;
+}
+.birth-box span {
+  padding: 4px 0;
+  color: #616161;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #ededed;
 }
