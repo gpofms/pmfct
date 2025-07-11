@@ -21,7 +21,7 @@
         <!-- Navbar Start -->
             <nav class="navbar navbar-expand navbar_bg sticky-top px-4 py-0">
                 <div class="d-flex align-items-center">
-                    <h3 class="text-color-1 me-4 fs-6">Admin Logo</h3>
+                    <h3 class="text-color-1 me-4 web-logo">PMFCT <span>PM - Family Care Tracker</span></h3>
                 </div>
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary_1 mb-0"><i class="fa fa-user-edit"></i></h2>
@@ -132,7 +132,7 @@
                             <a href="element.html" class="dropdown-item">Other Elements</a> --}}
                         </div>
                     </div>
-                    <a href="{{ route('kpi-master.index') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>KPI (Key Performance Indicator)</a>
+                    <a href="{{ route('kpi-master.index') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Health Dashboard</a>
                     <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
@@ -181,11 +181,11 @@
             <div class="container-fluid px-4">
                 <div class="row">
                     <header class="content-header pe-0 d-flex pt-4">
-                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">E-Commerce</h2>
+                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">PMFCT</h2>
                     <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6">
                         <ol class="breadcrumb fs-8">
-                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Quantum Admin</a></li>
-                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li>
+                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Dashboards</a></li>
+                            {{-- <li class="active breadcrumb-item" aria-current="page">Dashboards</li> --}}
                         </ol>
                     </div>
                     </header>
@@ -403,9 +403,7 @@
                             &copy; <a href="#">PMFCT</a>, All Right Reserved.
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            <a href="https://guj.nic.in" target="_blank">Designed & Developed By Gujarat NIC</a>
                         </div>
                     </div>
                 </div>

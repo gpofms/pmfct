@@ -8,30 +8,30 @@
 <body>
     <div class="container-fluid position-relative p-0">
 
-<section>
+<section id="login-bg">
 	<div class="page col-md-10">
 		<div class="welcome">
-                <h2>Welcome Back!</h2>
-                <p>Hello Dear, I am Robin Gautam. How it is?</p>
+                <h2>PMFCT</h2>
+				<h4>PM - Family Care Tracker</h4>
                 <button class="sign_in">Sign In</button>
                 <button class="btn">Sign Up</button>
 		</div>
-		<div class="sign_up p-3">
+		<div class="sign_up p-4">
 			<form method="POST" action="signup_user.php">
 			<h2>Sign Up your Account</h2>
-			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="far fa-user"></i> <input class="form-control" type="text" name="name"  placeholder="Full Name" required> </div>
-            <div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="far fa-envelope"></i> <input class="form-control" type="email" name="email" placeholder="name@example.com"></div>
-			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="fas fa-key"></i> <input class="form-control" type="password" name="password" placeholder="Password" required></div>
-			<div class="mt-4"><input type="submit" name="sign_up" value="Sign Up" class="w-100 btn btn-primary_new"></div>
+			<div class="position-relative text-box-icon align-items-center d-flex  mb-4"><i class="far fa-user"></i> <input class="form-control" type="text" name="name"  placeholder="Full Name" required> </div>
+            <div class="position-relative text-box-icon align-items-center d-flex  mb-4"><i class="far fa-envelope"></i> <input class="form-control" type="email" name="email" placeholder="name@example.com"></div>
+			<div class="position-relative text-box-icon align-items-center d-flex  mb-4"><i class="fas fa-key"></i> <input class="form-control" type="password" name="password" placeholder="Password" required></div>
+			<div class="mt-4"><input type="submit" name="sign_up" value="Sign Up" class="w-100 btn btn-primary_new mt-2"></div>
 		</form>
 	</div>
-	<div class="login p-3">
+	<div class="login p-4">
         <form action="{{route('login-user')}}" method="post" enctype="multipart/form-data">
             @csrf
 			<h2>Login your Account</h2>
-			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="far fa-user"></i> <input class="form-control" type="text" name="name" placeholder="name" required></div>
-			<div class="position-relative text-box-icon align-items-center d-flex  mb-3"><i class="fas fa-key"></i> <input class="form-control" type="password" name="password" placeholder="Password" required></div>
-			<input type="submit" name="sign_in" value="Sign In" class="w-100 btn btn-primary_new">
+			<div class="position-relative text-box-icon align-items-center d-flex  mb-4"><i class="far fa-user"></i> <input class="form-control" type="text" name="name" placeholder="name" required></div>
+			<div class="position-relative text-box-icon align-items-center d-flex  mb-4"><i class="fas fa-key"></i> <input class="form-control" type="password" name="password" placeholder="Password" required></div>
+			<input type="submit" name="sign_in" value="Sign In" class="w-100 btn btn-primary_new mt-2">
 		</form>
 		</div>
 	</div>
