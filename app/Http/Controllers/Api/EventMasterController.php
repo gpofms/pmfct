@@ -28,11 +28,12 @@ class EventMasterController extends Controller
     public function store(Request $request) {
 
         try {
-            $this->validate($request, [
+           $this->validate($request, [
                 'name' => 'required',
                 'agency_id' => 'required',
             ]);
         } catch (\Illuminate\Validation\ValidationException $e) {
+            // echo "<pre>";   print_r($e->getMessage()); die;
             return response()->json([
                 'status' => 'error',
                 'message' => $e->validator->errors()->first(),

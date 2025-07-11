@@ -173,15 +173,16 @@
                 <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0 text-color-1">KPI Master</h6>
-                        {{-- <a href="{{ route('kpi-master.create') }}" class="link_btn">Add</a> --}}
+                        <a href="{{ route('kpi-master.create') }}" class="link_btn">Add</a>
                     </div>
                     <div class="custom_table_border ">
-                        {{-- <table class="table table-bordered table-hover custom_table m-0">
+                        <table class="table table-bordered table-hover custom_table m-0">
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Active</th>
+                                    <th scope="col">Agency</th>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">KPI Name</th>
                                     <th scope="col">Created At</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -190,24 +191,22 @@
                                 $no = 0;
                             @endphp
                             <tbody>
-                                @foreach($agencies as $data)
+                                @foreach($kpis as $data)
+                                {{-- @dd($data->agency->name) --}}
                                     <tr>
                                         <td>{{++$no}}</td>
-                                        <td>{{strtoupper($data->name)}}</td>
-                                        @if($data->active == 'Y')
-                                            <td>Yes</td>
-                                        @else
-                                            <td>No</td>
-                                        @endif
+                                        <td>{{strtoupper($data->agency->name)}}</td>
+                                        <td>{{strtoupper($data->event->name)}}</td>
+                                        <td>{{strtoupper($data->kpi_name)}}</td>
                                         <td>{{date_to_format($data->created_at)}}</td>
                                         <td>
-                                            <a href="agency-master/'.{{$data->id}}.'/edit" class="btn btn-edit">Edit</a>
-                                            <a href="agency-master/'.{{$data->id}}.'" class="btn btn-view">View</a>
+                                            <a href="kpi-master/{{$data->id}}/edit" class="btn btn-edit">Edit</a>
+                                            <a href="kpi-master/{{$data->id}}" class="btn btn-view">View</a>
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table> --}}
+                        </table>
                     </div>
                 </div>
             </div>

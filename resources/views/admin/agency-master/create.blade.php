@@ -200,14 +200,7 @@
                                                 </div>
 
                                                 <div class="form-group col-md-4">
-                                                    {{-- <label for="active">Status : <span class="mendatory">*</span></label><br />
-                                                    <label><input type="radio" name="active" id="active" class="radio" value="Y" checked>Active</label>
-                                                    <label><input type="radio"  name="active" id="active" class="radio" value="N" >Inactive</label><br /> --}}
-
-
-
-
-                                                    <label class="d-block"><span class="form-label d-block mendatory">Status *</span></label>
+                                                    <label class="d-block"><span class="form-label d-block mendatory">Active *</span></label>
                                                     <div class="form-check form-check-inline">
                                                         <input class="form-check-input" type="radio" name="active" id="active" class="radio" value="Y" checked>
                                                         <label class="form-check-label" for="flexRadioDefault1">
@@ -221,10 +214,6 @@
                                                         </label>
                                                         <label class="error" for="active" ></label>
                                                       </div>
-
-
-
-
                                                 </div>
                                             </div>
 
@@ -278,6 +267,8 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script> -->
 
     <!-- Template Javascript -->

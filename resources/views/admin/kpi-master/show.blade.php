@@ -149,12 +149,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Agency Master</a>
                         <div class="dropdown-menu bg-transparent border-0">
-
                             <a href="{{ route('agency-master.index') }}" class="dropdown-item">Agencies</a>
-                            {{-- <a href="{{url("agency-master")}}" class="dropdown-item">Agencies</a> --}}
-
-                            {{-- <a href="typography.html" class="dropdown-item">Typography</a>
-                            <a href="element.html" class="dropdown-item">Other Elements</a> --}}
                         </div>
                     </div>
                     <a href="{{ route('kpi-master.index') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>KPI (Key Performance Indicator)</a>
@@ -179,67 +174,85 @@
 
         <!-- Content Start -->
         <div class="content">
-            <div class="container-fluid px-4">
-                <div class="row">
-                    <header class="content-header pe-0 d-flex pt-4">
-                    <h2 class="fs-7 m-0 text-body-emphasis text-dark-1">Agency Master</h2>
-                    <div aria-label="breadcrumb" class="d-none d-sm-flex ms-6">
-                        <ol class="breadcrumb fs-8">
-                            <li class="breadcrumb-item ps-3"><a href="#" style="cursor: pointer;">Agencies</a></li>
-                            <li class="active breadcrumb-item" aria-current="page">Dashboards</li>
-                        </ol>
-                    </div>
-                    </header>
-                </div>
-            </div>
-
 
             <!-- Recent Sales Start -->
-            <div class="container-fluid px-4">
-                <div class="bg-secondary_1 border_light-1 text-center rounded p-4">
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-secondary_1 border_light-1 rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0 text-color-1">Agency Master</h6>
-                        <a href="{{ route('agency-master.create') }}" class="link_btn">Add</a>
+                        <h6 class="mb-0 text-color-1">View KPI Details</h6>
                     </div>
-                    <div class="custom_table_border ">
-                        <table class="table table-bordered table-hover custom_table m-0">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Active</th>
-                                    <th scope="col">Created At</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            @php
-                                $no = 0;
-                            @endphp
-                            <tbody>
-                                @foreach($agencies as $data)
-                                    <tr>
-                                        <td>{{++$no}}</td>
-                                        <td>{{strtoupper($data->name)}}</td>
-                                        @if($data->active == 'Y')
-                                            <td>Yes</td>
-                                        @else
-                                            <td>No</td>
-                                        @endif
-                                        <td>{{date('d-m-Y',strtotime($data->created_at))}}</td>
-                                        <td>
-                                            <a href="agency-master/{{$data->id}}/edit" class="btn btn-edit" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="far fa-edit"></i></a>
-                                            <a href="agency-master/{{$data->id}}" class="btn btn-view" data-bs-toggle="tooltip" data-bs-placement="top" title="View"><i class="far fa-eye"></i></a>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
 
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                                    <div class="row admin-basic-list">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Agency Name<span>:</span></h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <p>
+                                                 {{$kpis->agency->name}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row admin-basic-list">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Event Name<span>:</span></h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <p>
+                                                 {{$kpis->event->name}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row admin-basic-list">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">KPI Name<span>:</span></h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <p>
+                                                 {{$kpis->kpi_name}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row admin-basic-list">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Description<span>:</span></h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <p>
+                                                 {{$kpis->description}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row admin-basic-list">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Equation<span>:</span></h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <p>
+                                                 {{$kpis->equation}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
             <!-- Recent Sales End -->
-
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4 footer_menu">
@@ -275,16 +288,12 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script> -->
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-    </script>
 
 </body>
 </html>

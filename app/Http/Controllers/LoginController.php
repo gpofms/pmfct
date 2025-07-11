@@ -12,7 +12,10 @@ use App\Models\ActivitySuccess;
 use App\Models\ActivityError;
 use Carbon\Carbon;
 use App\Models\EventMaster;
-use DB, DataTables, Redirect, Auth, Hashingids, PDF;
+use DB, DataTables, Redirect, Hashingids, PDF;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -33,16 +36,74 @@ class LoginController extends Controller
         return view('login');
     }
 
+    public function login(Request $request) {
+
+        try {
+
+            $user = User::where('name',  $request->name)->first();
+
+            //  if (! $user || ! Hash::check($request->password, $user->password)) {
+            if (!$user || ($request->password != $user->password)) {
+                return response()->json([
+                    'message' => 'Username or password incorrect',
+                ]);
+            }
+
+            $user->tokens()->delete();
+
+            // return response()->json([
+            //     'status' => 'success',
+            //     'message' => 'User logged in successfully',
+            //     'name' => $user->name,
+            //     'token' => $user->createToken('api_token')->plainTextToken,
+            // ]);
+
+             $transactions = PMFCTEvents::select('*')->get();
+
+            $pmfctBasics =  PMFCTBasics::select('*')->get();
+
+            $startDate = Carbon::now()->startOfMonth();
+
+            $lastDate = Carbon::now()->lastOfMonth();
+
+            $currentMonthTransactions = PMFCTEvents::whereBetween('created_at', [$startDate, $lastDate])->count();
+
+            $date = Carbon::now();
+
+            $monthName = $date->format('F');
+
+            $totalEvents = EventMaster::withCount('transactions')->has('transactions')->get();
+
+            $eventName = $totalEvents->pluck('name');
+
+            $transactionsCount = $totalEvents->pluck('transactions_count');
+
+            $totalAgencies = AgencyMaster::withCount('events')->has('events')->get();
+
+            $agencyName = $totalAgencies->pluck('name');
+
+            $eventsCount = $totalAgencies->pluck('events_count');
+
+            return view('dashboard',compact('transactions', 'pmfctBasics', 'currentMonthTransactions', 'monthName', 'totalEvents', 'transactionsCount', 'eventName', 'totalAgencies', 'agencyName', 'eventsCount'));
+
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $e->validator->errors()->first(),
+            ], 422);
+        }
+    }
+
     public function postLogin(Request $request)
     {
 
         try {
             $this->validate($request, [
-                'user_name' => 'required|string',
+                'name' => 'required|string',
                 'password' => 'required|string',
             ]);
         } catch (\Illuminate\Validation\ValidationException $e) {
-            // echo "<pre>";   print_r($e->getMessage()); die;
             return response()->json([
                 'status' => 'error',
                 'message' => $e->validator->errors()->first(),
@@ -51,8 +112,6 @@ class LoginController extends Controller
 
         try {
             $transactions = PMFCTEvents::select('*')->get();
-            // dd($transactions);
-            // dd($transactions[0]->subDistrict);
 
             $pmfctBasics =  PMFCTBasics::select('*')->get();
 
@@ -122,8 +181,16 @@ class LoginController extends Controller
         // return view('dashboard',compact('data'));
     }
 
-    public function logout()
-    {
+    public function logout(Request $request) {
+
+        // $request->user()->currentAccessToken()->delete();
+
+        // return response()->json(
+        // [
+        //     'status' => 'success',
+        //     'message' => 'User logged out successfully'
+        // ]);
+
         return redirect('login');
     }
 

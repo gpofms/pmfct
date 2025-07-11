@@ -28,6 +28,8 @@ Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard'
 
 
 Route::resource('agency-master', AgencyMasterController::class);
+
+Route::get('getEventName', [KPIMasterController::class, 'getEventName'])->name('getEventName');
 Route::resource('kpi-master', KPIMasterController::class);
 
 
